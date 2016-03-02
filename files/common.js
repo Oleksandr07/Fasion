@@ -21,14 +21,33 @@ $(function(){
 		$('.sub-menu').height(0);
 	});
 
-	$('.bxslider').bxSlider({
+	$('#models-ticker').bxSlider({
 		maxSlides: 4,
 		slideWidth: 294,
 		slideHeight: 250,
-		slideMargin: 10,
+		slideMargin: 0,
 		ticker: true,
-		speed: 15000
+		speed: 40000
 	});
+	$('#bxslider-portfolio').bxSlider({
+		maxSlides: 4,
+		slideWidth: 294,
+		slideHeight: 250,
+		slideMargin: 0,
+		nextSelector: '.portfolio-next',
+  		prevSelector: '.portfolio-prev',
+  		pager: false
+	});
+	$('#bxslider-polaroids').bxSlider({
+		maxSlides: 4,
+		slideWidth: 294,
+		slideHeight: 250,
+		slideMargin: 0,
+		nextSelector: '.polaroids-next',
+  		prevSelector: '.polaroids-prev',
+  		pager: false
+	});
+
 
 	$('.slides-wrapper').imageslider({
 		slideItems: '.my-slider-item',
