@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "uifarm-icons";
+  src: url("uifarm-icons.eot");
+  src: url("uifarm-icons.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+.accessible-content-hide {
+  clip: rect(1px 1px 1px 1px);
+}
+
+table {
+  border: 1px solid #d2d2d2;
+}
+table caption {
+  border-bottom: 0.2em solid #8ec043;
+}
+table th,
+table th {
+  background: gainsboro;
+}
+table td {
+  background-color: whitesmoke;
+}
+
+.input-select:after {
+  content: '' !important;
+}
+
+.footer-content li {
+  margin-right: 0 !important;
+  margin-left: 2.72109%;
+}
+.footer-content li:first-child {
+  margin-left: 0;
+}
