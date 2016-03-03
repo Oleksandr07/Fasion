@@ -17,7 +17,12 @@ $(function(){
 			overlay: {
 				css : {'background':'#fff'},
 				locked: true
-			}
+			},
+			title: false,
+		},
+		afterShow: function(){
+			sliderPortfolio.reloadSlider();
+			sliderPolaroid.reloadSlider();
 		}
 	});
 
@@ -68,16 +73,24 @@ $(function(){
   		auto: true,
 	});	
 
-		$('#bxslider-portfolio-modal').bxSlider({
-			maxSlides: 2,
-			slideWidth: 500,
-			slideHeight: 250,
-			slideMargin: 0,
-			nextSelector: '.modal-portfolio-next',
-	  		prevSelector: '.modal-portfolio-prev',
-	  		pager: false,
-	  		auto: true,
-		});	
+			var sliderPortfolio = $('#bxslider-portfolio-modal').bxSlider({
+				minSlides: 2,
+				maxSlides: 2,
+				slideWidth: 500,
+				slideMargin: 0,
+				nextSelector: '.modal-portfolio-next',
+		  		prevSelector: '.modal-portfolio-prev',
+		  		pager: false,
+			});	
+			var sliderPolaroid = $('#bxslider-polaroid-modal').bxSlider({
+				minSlides: 2,
+				maxSlides: 2,
+				slideWidth: 500,
+				slideMargin: 0,
+				nextSelector: '.modal-polaroid-next',
+				prevSelector: '.modal-polaroid-prev',
+				pager: false,
+			});			
 
 	$('#bxslider-polaroids').bxSlider({
 		maxSlides: 4,

@@ -4593,3 +4593,41 @@ body .fancybox-close:after {
     line-height: 100%;
     margin: 0;
 }
+
+#modal-portfolio .viewport, #modal-polaroid .viewport{
+    position: relative;
+    height: 100%;
+}
+#modal-portfolio .bx-wrapper, #modal-polaroid .bx-wrapper{
+    height: 100%;
+}
+#modal-portfolio .slides>li, #modal-polaroid .slides>li{
+    display: block;
+}
+#modal-portfolio .bx-wrapper .bx-viewport, #modal-polaroid .bx-wrapper .bx-viewport{
+    box-shadow: none;
+}
+
+#modal-portfolio .bx-direction-nav, #modal-polaroid .bx-direction-nav{
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+}
+#modal-portfolio .bx-direction-nav li, #modal-polaroid .bx-direction-nav li{
+    top: 50%;
+    margin-top: -40px;
+}
+#modal-portfolio .wm_model-picture img, #modal-polaroid .wm_model-picture img{
+    width: 100%;
+}
+#modal-portfolio .bx-prev, #modal-polaroid .bx-prev{
+    left: -48px;
+}
+#modal-portfolio .bx-next, #modal-polaroid .bx-next{
+    right: -48px;
+}
+.bx-direction-nav a:before{
+    color: inherit;
+}
