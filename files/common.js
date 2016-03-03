@@ -1,5 +1,26 @@
 $(function(){
 
+	$('.fancybox').fancybox({
+		padding: 0,
+		margin: 0,
+
+		width: '100%',
+        height: '100%',
+        autoSize: false,
+
+		openEffect: 'fade',
+		closeEffect: 'fade',
+
+		openSpeed: 400,
+		closeSpeed: 400,
+		helpers: {
+			overlay: {
+				css : {'background':'#fff'},
+				locked: true
+			}
+		}
+	});
+
 	$('#wm_back-to-top').on('click',function(){
 		$('html,body').animate({scrollTop:$($(this).attr('href')).offset().top},800);
 		return false;
@@ -34,7 +55,7 @@ $(function(){
 		slideHeight: 250,
 		slideMargin: 0,
 		ticker: true,
-		speed: 40000
+		speed: 70000
 	});
 	$('#bxslider-portfolio').bxSlider({
 		maxSlides: 4,
@@ -43,8 +64,21 @@ $(function(){
 		slideMargin: 0,
 		nextSelector: '.portfolio-next',
   		prevSelector: '.portfolio-prev',
-  		pager: false
-	});
+  		pager: false,
+  		auto: true,
+	});	
+
+		$('#bxslider-portfolio-modal').bxSlider({
+			maxSlides: 2,
+			slideWidth: 500,
+			slideHeight: 250,
+			slideMargin: 0,
+			nextSelector: '.modal-portfolio-next',
+	  		prevSelector: '.modal-portfolio-prev',
+	  		pager: false,
+	  		auto: true,
+		});	
+
 	$('#bxslider-polaroids').bxSlider({
 		maxSlides: 4,
 		slideWidth: 294,
@@ -52,7 +86,8 @@ $(function(){
 		slideMargin: 0,
 		nextSelector: '.polaroids-next',
   		prevSelector: '.polaroids-prev',
-  		pager: false
+  		pager: false,
+  		auto: true,
 	});
 
 
@@ -71,11 +106,14 @@ $(function(){
 	  }
 	);
 	wow.init();
+	
+	$(window).load(function () {
 
-	$('#blog-container').masonry({
-		//columnWidth: 200,
-		gutter: 0,
-		itemSelector: '.post'
+		$('#blog-container').masonry({
+			gutter: 0,
+			itemSelector: '.type-post',
+		});
+
 	});
 
 

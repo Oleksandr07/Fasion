@@ -4559,6 +4559,37 @@ body .bx-direction-nav li{
     }
 }
 
-/*body article{
-    margin: 0 !important;
-}*/
+.featured-image a{
+    display: block;
+}
+.modal{
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+body .fancybox-close{
+    top: 24px;
+    right: 24px;
+}
+body .fancybox-close:after {
+    font-family: uifarm-icons;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    color: #a4a4a4;
+    text-transform: none;
+    text-align: center;
+    text-decoration: inherit;
+    display: inline-block;
+    width: auto;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\e117";
+    font-size: 200%;
+    line-height: 100%;
+    margin: 0;
+}
