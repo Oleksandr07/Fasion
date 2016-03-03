@@ -18,6 +18,7 @@ $(function(){
 		return false;
 	});
 	$(window).resize(function() {
+		$('.head-nav-current').removeClass('active');
 		$('.sub-menu').height(0);
 	});
 
@@ -70,6 +71,12 @@ $(function(){
 	  }
 	);
 	wow.init();
+
+	$('#blog-container').masonry({
+		//columnWidth: 200,
+		gutter: 0,
+		itemSelector: '.post'
+	});
 
 
 });
